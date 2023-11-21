@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Form Validation</title>
+    <link rel="website icon" type="png" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- username, email, password, con password -->
+
+    <div class="upperContainer">
+        <h2>Sign Up</h2>
+        <div class="dMode">
+            <img src="assets/dark-mode-icon.png" alt="">
+        </div>
+    </div>
+    
+    <form onsubmit="return isValid()" action="success.html" method="get" class="container ">
+
+        <div class="inputes user"><label for="username">username:</label>
+            <input type="text" name="username" id="username" class="inp" placeholder="Username"><br> <span
+                class="err erUser"></span>
+        </div>
+
+        <div class="inputes mail"><label for="Email">email:</label>
+            <input type="email" name="Email" id="Email" class="inp" placeholder="Email"><br> <span
+                class="err erEmail"></span>
+        </div>
+
+        <div class="inputes pass"><label for="password">Password:</label>
+            <input type="password" name="password" id="password" autocomplete="" placeholder="Password" class="inp"><br>
+            <span class="err erPass"></span>
+        </div>
+
+        <div class="inputes conPass"><label for="conPassword">Confirm Password:</label>
+            <input type="password" name="conPassword" id="conPassword" placeholder="Confirm Password" autocomplete=""
+                class="inp"><br> <span class="err erConPass"></span>
+        </div>
+
+        <div class="inputes checks">
+            <input type="checkbox" onclick="showPass()" />&nbsp; <span>Show Password</span><br>
+        </div>
+
+        <button type="submit">Sign Up</button>
+
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
